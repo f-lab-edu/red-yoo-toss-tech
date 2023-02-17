@@ -1,23 +1,24 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+document.querySelector("#app").innerHTML = `
+  <div class='container'>
+    <nav>
+      <div class='nav-container'>
+        <div class='nav-logo-container'>
+          <a class='nav-logo-img' href='#'>
+            <img src="./public/toss-icon.png" alt="">
+            <span class='t-font'>toss</span>
+            tech
+           </a>
+        </div>
+        <div class='nav-items-container'>
+          <ul class='nav-items-list'>
+            <li class='nav-item'><a>디자인</a></li>
+            <li class='nav-item'><a>개발</a></li>
+            <li class='nav-item nav-item-button'><a>채용 바로가기</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
   </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+`;
