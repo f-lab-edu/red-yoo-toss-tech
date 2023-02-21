@@ -9,6 +9,14 @@ red-yoo-toss-tech(RYTT)는 vanilla JavaScript로 toss tech페이지를 만들면
 
 [tosstech 페이지](https://toss.tech/tech)을 기반으로 만듭니다.
 
+페이지 예시
+
+<img style='width:600px;' src='./public/img/toss-page.png'>
+
+<br>
+
+페이지 section을 나누어 Component단위로 작업합니다.
+
 - nav section : logo, gnb..등이 존재합니다.
 - main section : 개발 기술에 대한 list들이 존재합니다.
 - employment section : 채용 공고에 대한 내용들이 존재합니다.
@@ -27,12 +35,15 @@ red-yoo-toss-tech(RYTT)는 vanilla JavaScript로 toss tech페이지를 만들면
 
 
 ## Git 전략
-git-flow전략
+github에서 코드리뷰를 주기적으로 받으며 빠른 피드백을 통한 학습능력 증진이 목표이기에
+ 이 프로젝트에 git전략을 github-flow을 채택하였습니다.
+
+<img style="width:600px" src="./public/img/github-flow.png">
 
 <br>
 
 ## 커밋 메시지 
-[참고사이트](https://github.com/RomuloOliveira/commit-messages-guide/blob/master/README_ko-KR.md)
+[커밋 메시지 참고사이트](https://github.com/RomuloOliveira/commit-messages-guide/blob/master/README_ko-KR.md)
 
 - 명령조로 작성한다.
 - 첫 번째 문자를 대문자로 작성한다.
