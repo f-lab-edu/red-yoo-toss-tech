@@ -1,7 +1,6 @@
 import "../../style.css";
-import { footerComponent } from "./FooterComponent.js";
 
-document.querySelector("#app").innerHTML = `
+export const navComponent =`
   <div class='container'>
     <nav>
       <div class='nav-container'>
@@ -21,7 +20,5 @@ document.querySelector("#app").innerHTML = `
         </div>
       </div>
     </nav>
-
-    ${footerComponent}
   </div>
 `;
