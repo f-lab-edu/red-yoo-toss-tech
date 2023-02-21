@@ -251,6 +251,7 @@ table {
 }
 
 
+/* nav-component Section */
 nav {
   border-bottom: 1px solid var(--greyOpacity200);
   height: 65px;
@@ -325,4 +326,62 @@ nav {
 
 .nav-item-button a:hover {
   background-color: var(--blue700);
+}
+
+/* footer-component Section */
+footer {
+  padding: 50px 0 100px;
+}
+
+.footer-container{
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 120px;
+}
+
+.footer-links-list {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.footer-links {
+  width: 140px;
+  font-size: var(--font-size-p);
+  line-height: 20px;
+}
+
+.footer-links:last-of-type {
+  flex: 1;
+}
+
+.footer-links li {
+  padding-bottom: 15px;
+}
+
+.footer-links li a {
+  color: var(--grey500);
+}
+
+.footer-address {
+  color: var(--grey500);
+  font-size: var(--font-size-p);
+  line-height: 20px;
+}
+
+.footer-address p {
+  color: black;
+  font-weight: var(--font-weight-bold);
+  padding-bottom: var(--padding-base-horizontal);
+}
+
+.footer-social-links {
+  display: flex; 
+  margin-top: 80px;
+}
+
+.footer-social-item {
+  padding-right: 10px;
+}
+.footer-social-item:last-child {
+  padding-right: 0;
 }
