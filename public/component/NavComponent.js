@@ -1,4 +1,5 @@
-import "./style.css";
+import "../../style.css";
+import { footerComponent } from "./FooterComponent.js";
 
 document.querySelector("#app").innerHTML = `
   <div class='container'>
@@ -6,7 +7,7 @@ document.querySelector("#app").innerHTML = `
       <div class='nav-container'>
         <div class='nav-logo-container'>
           <a class='nav-logo-img' href='#'>
-            <img src="./public/toss-icon.png" alt="">
+            <img src="./public/img/toss-icon.png" alt="">
             <span class='t-font'>toss</span>
             tech
            </a>
@@ -20,5 +21,7 @@ document.querySelector("#app").innerHTML = `
         </div>
       </div>
     </nav>
+
+    ${footerComponent}
   </div>
 `;
