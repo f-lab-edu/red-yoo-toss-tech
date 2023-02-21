@@ -11,7 +11,7 @@ red-yoo-toss-tech(RYTT)는 vanilla JavaScript로 toss tech페이지를 만들면
 
 페이지 예시
 
-<img src='./public/toss-page.png'>
+<img style='width:600px;' src='./public/img/toss-page.png'>
 
 <br>
 
@@ -35,7 +35,10 @@ red-yoo-toss-tech(RYTT)는 vanilla JavaScript로 toss tech페이지를 만들면
 
 
 ## Git 전략
-git-flow전략
+github에서 코드리뷰를 주기적으로 받으며 빠른 피드백을 통한 학습능력 증진이 목표이기에
+ 이 프로젝트에 git전략을 github-flow을 채택하였습니다.
+
+<img style="width:600px" src="./public/img/github-flow.png">
 
 <br>
 
