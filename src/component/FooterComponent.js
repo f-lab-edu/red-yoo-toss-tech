@@ -1,6 +1,6 @@
 import "../../style.css";
 
-export const footerComponent = document.querySelector("#app").innerHTML = `
+export const footerComponent = `
   <footer>
     <div class='footer-container'>
         <div class='footer-links-list'>
@@ -44,27 +44,27 @@ export const footerComponent = document.querySelector("#app").innerHTML = `
         </address>
         <ul class="footer-social-links">
             <li class='footer-social-item'>
-                <a>
+                <a href='#'>
                     <img src="./img/icon-facebook.svg"/>
                 </a>
             </li>
             <li class='footer-social-item'>
-                <a>
+                <a href='#'>
                     <img src="./img/icon-blog.svg"/>
                 </a>
             </li>
             <li class='footer-social-item'>
-                <a>
+                <a href='#'>
                     <img src="./img/icon-naver.svg"/>
                 </a>
             </li>
             <li class='footer-social-item'>
-                <a>
+                <a href='#'>
                     <img src="./img/icon-twitter.svg"/>
                 </a>
             </li>
             <li class='footer-social-item'>
-                <a>
+                <a href='#'>
                     <img src="./img/icon-instagram.svg"/>
                 </a>
             </li>
@@ -72,4 +72,3 @@ export const footerComponent = document.querySelector("#app").innerHTML = `
     </div>
   </footer>
 `;
-
