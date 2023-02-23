@@ -328,6 +328,51 @@ nav {
   background-color: var(--blue700);
 }
 
+/* main-componet Section */
+#main-container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  cursor: pointer;
+}
+#main-container:hover .txt-title {
+  color: var(--blue500);
+}
+.logo-img {
+  width: 240px;
+  height: 240px;
+  margin-right: 48px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: color 0.3s ease;
+}
+.txt-title {
+  display: inline-block;
+  margin-bottom: 14px;
+  overflow: hidden;
+  word-break: keep-all;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  transition: color 0.3s ease;
+}
+.txt-content {
+  display: block;
+  margin-bottom: 12px;
+  word-break: keep-all;
+  font-size: var(--font-size-h7);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-base);
+  color: var(--grey700);
+}
+.txt-date {
+  display: inline-block;
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--grey500);
+}
+
 /* footer-component Section */
 footer {
   padding: 50px 0 100px;
