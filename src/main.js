@@ -1,9 +1,9 @@
-import { navComponent } from "./component/NavComponent.js";
-import { mainComponent } from "./component/MainComponent.js";
-import { footerComponent } from "./component/FooterComponent.js";
+import NavComponent from "./component/NavComponent.js";
+import FooterComponent from './component/FooterComponent.js'
+import MainComponent from "./component/MainComponent.js";
 
-document.querySelector('#app').innerHTML += `
-    ${navComponent}
-    ${mainComponent}
-    ${footerComponent}
-`
+window.addEventListener('DOMContentLoaded', (e) => {
+    new NavComponent(document.querySelector('#app'))
+    new MainComponent(document.querySelector('#app'))
+    new FooterComponent(document.querySelector('#app'))
+})
