@@ -1,9 +1,10 @@
 class NavComponent {
   constructor($container) {
     this.$container = $container;
-
-    this.render = () => {
-      this.$container.innerHTML += `
+  }
+  
+  render(){
+      this.$container.innerHTML +=`
     <div class='container'>
       <nav>
         <div class='nav-container'>
@@ -26,9 +27,6 @@ class NavComponent {
     </div>
   `;
     };
-
-    this.render();
   }
-}
 
-export default NavComponent
+export default NavComponent;
