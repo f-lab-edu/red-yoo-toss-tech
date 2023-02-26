@@ -4,7 +4,7 @@ class MainComponent {
   }
 
   render() {
-    this.$container.innerHTML += `
+      return `
       <a id="main-container">
         <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
         <div>

@@ -3,7 +3,7 @@ class FooterComponent {
         this.$container = $container;
     }
     render() {
-        this.$container.innerHTML += `
+        return `
     <footer>
       <div class='footer-container'>
           <div class='footer-links-list'>

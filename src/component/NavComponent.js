@@ -4,7 +4,7 @@ class NavComponent {
   }
   
   render(){
-      this.$container.innerHTML +=`
+    return `
     <div class='container'>
       <nav>
         <div class='nav-container'>
