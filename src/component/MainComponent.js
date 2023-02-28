@@ -6,21 +6,23 @@ class MainComponent {
   }
 
   render() {
-    const json = JSON.stringify(MOCK_DATA);
-    const jsonDataList = JSON.parse(json);
-    let makeList = ``;
+    const jsonDataList = MOCK_DATA;
+    let result = '';
 
-    for (let i = 0; i < 14; i++) {
-      makeList += `
+    jsonDataList.reduce((acc, { title, content, date }) => {
+      acc += `
         <a id="main-container">
           <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
           <div>
-            ${this.totalComponent(jsonDataList[i].title, jsonDataList[i].content, jsonDataList[i].date)}
+            ${this.totalComponent(title, content, date)}
           </div>
-        </a>
+        </a>    
         `;
-    }
-    return makeList;
+
+      result = acc;
+      return acc;
+    }, '');
+    return result;
   }
 
   totalComponent(title, content, date) {
@@ -45,9 +47,18 @@ class MainComponent {
     `;
   }
 
+  Unix_timestamp(t) {
+    let date = new Date(t * 1000);
+    let year = date.getFullYear();
+    let month = '0' + (date.getMonth() + 1);
+    let day = '0' + date.getDate();
+
+    return year + '-' + month.slice(-2) + '-' + day.slice(-2) + ' ';
+  }
+
   dateComponent(date) {
     return `
-      <span class="txt-date">${date}</span>    
+      <span class="txt-date">${this.Unix_timestamp(date)}</span>
     `;
   }
 }
