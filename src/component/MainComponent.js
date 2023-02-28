@@ -10,12 +10,12 @@ class MainComponent {
     const jsonDataList = JSON.parse(json)
     let makeList = ``
     
-    for(let i = 0; i < 14; i++) {
+      for(let i = 0; i < 14; i++) {
         makeList += `
         <a id="main-container">
           <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
           <div>
-          ${this.totalComponent(jsonDataList[i].title, jsonDataList[i].content, jsonDataList[i].date)}          
+            ${this.totalComponent(jsonDataList[i].title, jsonDataList[i].content, jsonDataList[i].date)}
           </div>
         </a>
         `
