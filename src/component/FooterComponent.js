@@ -1,9 +1,9 @@
 class FooterComponent {
-    constructor($container) {
-        this.$container = $container;
-    }
-    render() {
-        return `
+  constructor($container) {
+    this.$container = $container;
+  }
+  render() {
+    return `
     <footer>
       <div class='footer-container'>
           <div class='footer-links-list'>
@@ -75,7 +75,7 @@ class FooterComponent {
       </div>
     </footer>
   `;
-    }
+  }
 }
 
 export default FooterComponent;
