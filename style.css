@@ -453,7 +453,7 @@ nav {
   margin-right: 48px;
   object-fit: cover;
   border-radius: 14px;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .txt-title {
   display: inline-block;
