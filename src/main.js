@@ -11,10 +11,10 @@ const main = new MainComponent($app);
 const footer = new FooterComponent($app);
 
 window.addEventListener('DOMContentLoaded', () => {
-  $nav.innerHTML += `
+  $nav.innerHTML = `
     ${nav.render()}
     `;
-  $footer.innerHTML += `
+  $footer.innerHTML = `
     ${footer.render()}
     `;
 });
