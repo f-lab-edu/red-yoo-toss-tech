@@ -1,13 +1,13 @@
 import MOCK_DATA from '../../MOCK_DATA.json';
 
-class MainComponent {
+class DesignComponent {
   constructor($container) {
     this.$container = $container;
   }
 
   render() {
     return `
-    <h3 class='main-subject'>개발</h3>
+    <h3 class='main-subject'>디자인</h3>
     ${this.jsonRender()}
     `
   }
@@ -70,4 +70,4 @@ class MainComponent {
   }
 }
 
-export default MainComponent;
+export default DesignComponent;
