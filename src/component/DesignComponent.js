@@ -19,7 +19,7 @@ class DesignComponent {
     jsonDataList.reduce((acc, { title, summary, date }) => {
       acc += `
         <a id="main-container">
-          <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
+          <img class="logo-img" src="./src/img/design-title-img.png" alt="컨텐츠 이미지">
           <div>
             ${this.totalComponent(title, summary, date)}
           </div>
