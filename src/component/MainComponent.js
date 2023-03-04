@@ -9,19 +9,19 @@ class MainComponent {
     return `
     <h3 class='main-subject'>개발</h3>
     ${this.jsonRender()}
-    `
+    `;
   }
 
   jsonRender() {
     const jsonDataList = MOCK_DATA;
     let result = '';
 
-    jsonDataList.reduce((acc, { title, content, date }) => {
+    jsonDataList.reduce((acc, { title, summary, date }) => {
       acc += `
         <a id="main-container">
           <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
           <div>
-            ${this.totalComponent(title, content, date)}
+            ${this.totalComponent(title, summary, date)}
           </div>
         </a>    
         `;
@@ -32,10 +32,10 @@ class MainComponent {
     return result;
   }
 
-  totalComponent(title, content, date) {
+  totalComponent(title, summary, date) {
     return `
         ${this.titleComponent(title)}
-        ${this.contentComponent(content)}
+        ${this.contentComponent(summary)}
         ${this.dateComponent(date)}
     `;
   }
@@ -46,10 +46,10 @@ class MainComponent {
     `;
   }
 
-  contentComponent(content) {
+  contentComponent(summary) {
     return `
       <span class="txt-content">
-        ${content}
+        ${summary}
       </span>      
     `;
   }

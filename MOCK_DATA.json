@@ -2,85 +2,127 @@
   {
     "id": 1,
     "title": "World of Apu, The (Apur Sansar)",
-    "content": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-    "date": "1637744308"
+    "summary": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    "date": "1637744308",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 2,
     "title": "Barbarian Invasions, The (Les invasions barbares)",
-    "content": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-    "date": "1660439429"
+    "summary": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "date": "1660439429",
+    "author": "황채은",
+    "job": "QA Manager",
+    "content": "<p>안녕하세요. 토스증권 QA팀에서 일하고 있는 QA Manager 황채은입니다.</p>지난 글에서 잠깐 언급되었던 토스증권의 Closed Beta Test 기억하실까요? <code><span>🔗</span><a href='https://toss.tech/article/tosssec-qateam'>지난 포스팅 참고하기 링크</a></code></p><p>오늘은 해외 증권 서비스 출시를 위해 토스증권 임직원 대상으로 진행한 Closed Beta Test 에 대해 소개하려고 합니다.</p><p></p><h3>토스증권 서비스는 어떤 테스트 과정을 통해 출시되고 있을까요?</h3><p>토스증권에서는 기능별로 Silo가 만들어져있고, 그 Silo에는 PO, Developer, PD, DA, QA가 함께 서비스를 만들고 있는데요.</p><p>* PO(Product Owner), 개발자(Front/Server/Core), PD(Product Designer), DA(Data Analyst), QA(Quality Assurance)</p><p>개발이 완료된 서비스들은 1차로 개발자 단위 테스트를 진행 후 QA Manager는 알파 환경에서 계획한 테스트를 진행하고, 이슈 수정이 모두 완료되면 QA 환경에서 최종 확인된 기능에 대해 서비스 Release를 Silo 별로 진행하고 있습니다. 이런 과정은 일반적인 IT 회사의 QA Cycle과 비슷하게 진행하고 있어요.</p><p>하지만, 토스증권에서는 내부 임직원들 대상으로 테스트 참여를 유도하여 미처 발견하지 못한 Edge Case 들과 보다 다양한 사용자의 피드백을 미리 얻고자  Closed Beta Test를 진행하기도 한답니다. 실제 제가 작년에 진행했던 토스증권의 해외 주식 서비스 런칭 경험을 소개해 드리려고 해요.</p><p>토스증권에서 진행한 내부 임직원 테스트는 아래의 다양한 테스트 방식의 개념을 조금씩 섞어서 진행했어요.</p><p>QA라면 모두가 알고 있는 탐색적 테스팅의 개념, Dog Fooding, Bug Bash를 모두 활용하였는데요. 그전에 개념들을 한번 언급하고 지나갈게요!</p>"
   },
   {
     "id": 3,
     "title": "Enter the Phoenix (Da lao ai mei li)",
-    "content": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-    "date": "1657283063"
+    "summary": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    "date": "1657283063",
+    "author": "송현지",
+    "job": "Node.js Developer",
+    "content": "<h1>들어가며</h1><p>데코레이터는 비즈니스와 상관 없는 로직들을 숨기면서 기능을 변경하거나 확장할 수 있게 합니다. 또한 여러 클래스에서 반복되는 공통 관심사가 있을 때 데코레이터를 사용하면 중복된 코드를 줄이고 코드를 모듈 단위로 관리하는 효과를 거둘 수 있습니다.</p><figure class='wp-block-image size-large'><div data-rmiz-wrap='visible'><img loading='lazy' width='1024' height='847' src='https://wp.toss.tech/wp-content/uploads/2022/11/tech-blog-1-1024x847.png' alt='' class='wp-image-1001' srcSet='https://toss.tech/wp-content/uploads/2022/11/tech-blog-1-1024x847.png 1024w, https://toss.tech/wp-content/uploads/2022/11/tech-blog-1-300x248.png 300w, https://toss.tech/wp-content/uploads/2022/11/tech-blog-1-768x635.png 768w, https://toss.tech/wp-content/uploads/2022/11/tech-blog-1-1536x1270.png 1536w, https://toss.tech/wp-content/uploads/2022/11/tech-blog-1-1568x1297.png 1568w, https://toss.tech/wp-content/uploads/2022/11/tech-blog-1.png 2000w' sizes='(max-width: 1024px) 100vw, 1024px' style='max-width:100%;max-height:100%'/><button aria-label='Zoom image' data-rmiz-btn-open='true'></button></div></figure><p>이런 이유로 저희 Node.js Chapter에서도 데코레이터를 적극 활용하고 있습니다. 하지만 NestJS에서는 데코레이터를 만들 때 다음과 같은 질문들이 있었습니다.<br/></p><ol><li>데코레이터에서 Provider를 사용해야할 때 어떻게 Provider에 접근할 수 있을까?</li><li>메타데이터를 쓰는 NestJS 데코레이터를 일반 데코레이터와 사용해도 괜찮을까?</li></ol><p><br/>NestJS에서 데코레이터를 만들기 위해서는 NestJS의 DI와 메타 프로그래밍 환경 등을 고려해야 합니다. 그래서 이 글을 통해 NestJS에서는 어떻게 데코레이터를 만드는지 살펴보고, 앞의 두 질문들을 고려하여 NestJS 환경에 맞는 데코레이터를 만들어보려고 합니다.<br/></p><p>들어가기 전에, 만약 데코레이터나 메타데이터가 생소하시다면 아래 문서들을 읽어보시는 걸 추천드립니다.</p><ul><li><a href='https://www.typescriptlang.org/ko/docs/handbook/decorators.html'>Typescript Decorator</a></li><li><a href='https://www.npmjs.com/package/reflect-metadata'>reflect-metadata</a></li></ul><p><br/></p><hr class='wp-block-separator'/><p><br/></p>"
   },
   {
     "id": 4,
     "title": "Wondrous Oblivion",
-    "content": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    "date": "1645010970"
+    "summary": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "date": "1645010970",
+    "author": "박서진",
+    "job": "Node.js Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 5,
     "title": "Kick-Ass",
-    "content": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "date": "1670691878"
+    "summary": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+    "date": "1670691878",
+    "author": "박서진",
+    "job": "QA Manager",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 6,
     "title": "Port of Shadows (Quai des brumes)",
-    "content": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-    "date": "1643400667"
+    "summary": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    "date": "1643400667",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 7,
     "title": "Cat Run",
-    "content": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-    "date": "1659018252"
+    "summary": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+    "date": "1659018252",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 8,
     "title": "127 Hours",
-    "content": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-    "date": "1649788061"
+    "summary": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    "date": "1649788061",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 9,
     "title": "Killing Them Softly",
-    "content": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-    "date": "1654643764"
+    "summary": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+    "date": "1654643764",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 10,
     "title": "Art of Dying, The (El Arte de Morir)",
-    "content": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "date": "1656237354"
+    "summary": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "date": "1656237354",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 11,
     "title": "Osaka Elegy (Naniwa erejî)",
-    "content": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "date": "1671474852"
+    "summary": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+    "date": "1671474852",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 12,
     "title": "The Great Northfield Minnesota Raid",
-    "content": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
-    "date": "1640069258"
+    "summary": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
+    "date": "1640069258",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 13,
     "title": "Beach Boys: An American Family, The",
-    "content": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-    "date": "1639357720"
+    "summary": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    "date": "1639357720",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   },
   {
     "id": 14,
     "title": "Interview with the Assassin",
-    "content": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-    "date": "1671494936"
+    "summary": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+    "date": "1671494936",
+    "author": "박서진",
+    "job": "Frontend Developer",
+    "content": "<p>토스 앱은 넓은 범위의 기기를 지원하면서도 현대적인 JavaScript를 이용해서 개발되고 있습니다. 그렇지만 최신 JavaScript를 오래된 브라우저 위에서 실행하기 위해서는 “Polyfill” 문제를 해결해야 하는데요.</p> <p>이번 아티클에서는 Polyfill 문제가 무엇인지 알아보고, 토스에서 어떻게 똑똑하게 다루고 있는지 살펴보려고 합니다.</p> <h2>Polyfill이란?</h2> <p>오래된 버전의 브라우저에서는 현재 JavaScript가 당연하게 사용하고 있는 <code>Promise</code>나 <code>Set</code>객체가 없는 경우가 있습니다. 편리한 <a href='https://developer.mozilla.org/ko/docs/WebJavaScriptReference/Global_Objects/Array/at'>Array.prototype.at()</a>API는 Chrome 92 이상에서만 지원되기도 합니다.</p> <p>예를 들어서, 아래와 같은 코드는 최신 브라우저에서는 잘 동작하지만, 오래된 브라우저에서는 실패합니다. 객체나 메서드에 대한 구현이 없기 때문이죠.</p> "
   }
 ]
