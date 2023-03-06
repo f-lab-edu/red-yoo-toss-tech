@@ -21,7 +21,6 @@ class ArticleComponent {
     let result = '';
 
     jsonDataList.reduce((acc, { title, date, author, job, content }) => {
-      console.log(acc);
       acc += `
             ${this.totalComponent(title, date, author, job, content)}
         `;
@@ -53,7 +52,7 @@ class ArticleComponent {
       <div>
         <div class='author-info'>
           <h3 class='author'>${author}</h3>
-          <h3 class='job'>${job}</h3>
+          <h3 class='author'>ㆍ${job}</h3>
         </div>
         <div class="create-date">${this.dateComponent(date)}</div>
       </div>
@@ -63,9 +62,9 @@ class ArticleComponent {
 
   contentComponent(content) {
     return `
-      <span class="article-content">
+      <div class="article-content">
         ${content}
-      </span>      
+      </div>      
     `;
   }
 
