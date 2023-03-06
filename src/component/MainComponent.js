@@ -16,9 +16,9 @@ class MainComponent {
     const jsonDataList = MOCK_DATA;
     let result = '';
 
-    jsonDataList.reduce((acc, { title, summary, date }) => {
+    jsonDataList.reduce((acc, { id, title, summary, date }) => {
       acc += `
-        <a id="main-container" href='/article'>
+        <a id="main-container" href='/article/1'>
           <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지" data-link>
           <div>
             ${this.totalComponent(title, summary, date)}

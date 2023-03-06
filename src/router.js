@@ -4,6 +4,18 @@ import ArticleComponent from './component/ArticleComponent';
 import NotFound from './component/NotFound';
 
 const $main = document.querySelector('.main');
+const pathToRegex = (path) => new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
+
+const getParams = (match) => {
+  const values = match.result.slice(1);
+  const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map((result) => result[1]);
+
+  return Object.fromEntries(
+    keys.map((key, i) => {
+      return [key, values[i]];
+    }),
+  );
+};
 
 const navigateTo = (url) => {
   history.pushState(null, '', url);
@@ -14,20 +26,18 @@ const router = async () => {
   const routes = [
     { path: '/', view: MainComponent },
     { path: '/design', view: DesignComponent },
-    { path: '/article', view: ArticleComponent },
+    { path: '/article/:id', view: ArticleComponent },
     { path: '/404', view: NotFound },
   ];
 
   const matches = routes.map((route) => {
     return {
       route: route,
-      isMatch: location.pathname === route.path,
+      result: location.pathname.match(pathToRegex(route.path)),
     };
   });
-  console.log(matches);
 
-  let match = matches.find((v) => v.isMatch);
-  console.log(match);
+  let match = matches.find((matches) => matches.result !== null);
 
   if (!match) {
     match = {
@@ -35,7 +45,7 @@ const router = async () => {
       isMatch: true,
     };
   }
-  const view = new match.route.view();
+  const view = new match.route.view(getParams(match));
   $main.innerHTML = await view.render();
 };
 
