@@ -9,7 +9,7 @@ class ArticleComponent {
     return `
       <div class="article-container">
         <div class="article-img">
-          <img src='./src/img/content1.png'/>
+          <img src='../src/img/content1.png'/>
         </div>
         ${this.jsonRender()}
       </div>
@@ -48,7 +48,7 @@ class ArticleComponent {
   authorComponent(author, job, date) {
     return `
     <div class='author-section'>
-      <img src='./src/img/author-img.png'class='author-img'>
+      <img src='../src/img/author-img.png'class='author-img'>
       <div>
         <div class='author-info'>
           <h3 class='author'>${author}</h3>

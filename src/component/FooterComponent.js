@@ -48,27 +48,27 @@ class FooterComponent {
           <ul class="footer-social-links">
               <li class='footer-social-item'>
                   <a href='#'>
-                      <img src="./src/img/icon-facebook.svg"/>
+                      <img src="../src/img/icon-facebook.svg"/>
                   </a>
               </li>
               <li class='footer-social-item'>
                   <a href='#'>
-                      <img src="./src/img/icon-blog.svg"/>
+                      <img src="../src/img/icon-blog.svg"/>
                   </a>
               </li>
               <li class='footer-social-item'>
                   <a href='#'>
-                      <img src="./src/img/icon-naver.svg"/>
+                      <img src="../src/img/icon-naver.svg"/>
                   </a>
               </li>
               <li class='footer-social-item'>
                   <a href='#'>
-                      <img src="./src/img/icon-twitter.svg"/>
+                      <img src="../src/img/icon-twitter.svg"/>
                   </a>
               </li>
               <li class='footer-social-item'>
                   <a href='#'>
-                      <img src="./src/img/icon-instagram.svg"/>
+                      <img src="../src/img/icon-instagram.svg"/>
                   </a>
               </li>
           </ul>
