@@ -20,15 +20,36 @@ class ArticleComponent {
     const jsonDataList = MOCK_DATA;
     let result = '';
 
-    jsonDataList.reduce((acc, { title, date, author, job, content }) => {
-      acc += `
-            ${this.totalComponent(title, date, author, job, content)}
-        `;
+    let path = location.pathname;
+    let pageId = path.slice(path.length - 1, path.length);
+    let refinedData;
 
-      result = acc;
-      return acc;
-    }, '');
-    return result;
+    for (let i = 0; i < jsonDataList.length; i++) {
+      // const a = jsonDataList.filter((data) => pageId === data[i].id);
+      // console.log(jsonDataList[i].id === Number(pageId));
+      if (jsonDataList[i].id === Number(pageId)) {
+        // console.log(jsonDataList[pageId - 1]);
+        refinedData = jsonDataList[pageId - 1];
+      }
+    }
+    console.log(refinedData);
+    return this.totalComponent(
+      refinedData.title,
+      refinedData.date,
+      refinedData.author,
+      refinedData.job,
+      refinedData.content,
+    );
+
+    // jsonDataList.reduce((acc, { title, date, author, job, content }) => {
+    //   acc += `
+    //         ${this.totalComponent(title, date, author, job, content)}
+    //     `;
+
+    //   result = acc;
+    //   return acc;
+    // }, '');
+    // return result;
   }
 
   totalComponent(title, date, author, job, content) {
