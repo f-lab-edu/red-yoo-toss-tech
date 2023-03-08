@@ -6,29 +6,15 @@ class ArticleComponent {
   }
 
   render() {
+    const { title, date, author, job, content } = this.$container;
     return `
       <div class="article-container">
         <div class="article-img">
           <img src='../src/img/content1.png'/>
         </div>
-        ${this.jsonRender()}
+        ${this.totalComponent(title, date, author, job, content)}
       </div>
     `;
-  }
-
-  jsonRender() {
-    const jsonDataList = MOCK_DATA;
-    const { pathname } = location;
-    const pageId = pathname.split('/').slice(-1)[0];
-    const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
-
-    return this.totalComponent(
-      refinedData.title,
-      refinedData.date,
-      refinedData.author,
-      refinedData.job,
-      refinedData.content,
-    );
   }
 
   totalComponent(title, date, author, job, content) {
