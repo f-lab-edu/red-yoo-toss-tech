@@ -2,6 +2,7 @@ import DesignComponent from './component/DesignComponent';
 import MainComponent from './component/MainComponent';
 import ArticleComponent from './component/ArticleComponent';
 import NotFound from './component/NotFound';
+import MOCK_DATA from '../MOCK_DATA.json';
 
 const $main = document.querySelector('.main');
 const pathToRegex = (path) => new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
@@ -21,6 +22,12 @@ const navigateTo = (url) => {
   history.pushState(null, '', url);
   router();
 };
+
+const jsonDataList = MOCK_DATA;
+const { pathname } = location;
+const pageId = pathname.split('/').slice(-1)[0];
+const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
+
 
 const router = async () => {
   const routes = [
@@ -45,7 +52,7 @@ const router = async () => {
       isMatch: true,
     };
   }
-  const view = new match.route.view(getParams(match));
+  const view = new match.route.view(refinedData);
   $main.innerHTML = await view.render();
 };
 
