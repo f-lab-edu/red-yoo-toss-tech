@@ -18,15 +18,9 @@ class ArticleComponent {
 
   jsonRender() {
     const jsonDataList = MOCK_DATA;
-    let path = location.pathname;
-    let pageId = path.slice(path.length - 1, path.length);
-    let refinedData = '';
-
-    jsonDataList.find((ele) => {
-      if (ele.id === Number(pageId)) {
-        refinedData = ele;
-      }
-    });
+    const { pathname } = location;
+    const pageId = pathname.slice(pathname.length - 1);
+    const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
 
     return this.totalComponent(
       refinedData.title,
