@@ -19,7 +19,7 @@ class ArticleComponent {
   jsonRender() {
     const jsonDataList = MOCK_DATA;
     const { pathname } = location;
-    const pageId = pathname.slice(pathname.length - 1);
+    const pageId = pathname.split('/').slice(-1).join('');
     const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
 
     return this.totalComponent(
