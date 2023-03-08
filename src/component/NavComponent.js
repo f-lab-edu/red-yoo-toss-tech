@@ -10,7 +10,7 @@ class NavComponent {
         <div class='nav-container'>
           <div class='nav-logo-container'>
             <a class='nav-logo-img' href="/" data-link>
-              <img src="./src/img/toss-icon.png" alt="">
+              <img src="../src/img/toss-icon.png" alt="">
               <span class='t-font'>toss</span>
               tech
              </a>
