@@ -2,7 +2,7 @@ import DesignComponent from './component/DesignComponent';
 import MainComponent from './component/MainComponent';
 import ArticleComponent from './component/ArticleComponent';
 import NotFound from './component/NotFound';
-import MOCK_DATA from '../MOCK_DATA.json';
+import MOCK_DATA from '../TECH_MOCK_DATA.json';
 
 const $main = document.querySelector('.main');
 const pathToRegex = (path) => new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
@@ -27,7 +27,6 @@ const jsonDataList = MOCK_DATA;
 const { pathname } = location;
 const pageId = pathname.split('/').slice(-1)[0];
 const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
-
 
 const router = async () => {
   const routes = [

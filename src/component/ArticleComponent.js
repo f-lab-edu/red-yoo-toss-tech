@@ -1,5 +1,3 @@
-import MOCK_DATA from '../../MOCK_DATA.json';
-
 class ArticleComponent {
   constructor($container) {
     this.$container = $container;

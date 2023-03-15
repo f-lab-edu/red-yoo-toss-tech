@@ -1,4 +1,4 @@
-import MOCK_DATA from '../../MOCK_DATA.json';
+import MOCK_DATA from '../../TECH_MOCK_DATA.json';
 
 class MainComponent {
   constructor($container) {
