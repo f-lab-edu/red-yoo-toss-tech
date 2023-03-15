@@ -1,4 +1,4 @@
-import MOCK_DATA from '../../MOCK_DATA.json';
+import DISIGN_MOCK_DATA from '../../DISIGN_MOCK_DATA.json';
 
 class DesignComponent {
   constructor($container) {
@@ -13,7 +13,7 @@ class DesignComponent {
   }
 
   jsonRender() {
-    const jsonDataList = MOCK_DATA;
+    const jsonDataList = DISIGN_MOCK_DATA;
     let result = '';
 
     jsonDataList.reduce((acc, { title, summary, date, id }) => {
