@@ -13,7 +13,7 @@ class NavComponent {
               <img src="../src/img/toss-icon.png" alt="">
               <span class='t-font'>toss</span>
               tech
-             </a>
+            </a>
           </div>
           <div class='nav-items-container'>
             <ul class='nav-items-list'>
