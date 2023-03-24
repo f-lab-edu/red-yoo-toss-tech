@@ -58,11 +58,14 @@ const router = async () => {
 window.addEventListener('popstate', router);
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.addEventListener('click', (e) => {
-    if (e.target.matches('[data-link]')) {
+  document.querySelectorAll('#main-container').forEach((ele) => {
+    ele.addEventListener('click', (e) => {
       e.preventDefault();
-      navigateTo(e.target.href);
-    }
+      // console.log(e.currentTarget.getAttribute('data-link'));
+      if (e.currentTarget.matches('[data-link]')) {
+        navigateTo(`/article/${e.currentTarget.getAttribute('data-link')}`);
+      }
+    });
   });
 });
 
