@@ -7,6 +7,7 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "allowJs": false,
     "paths": {
