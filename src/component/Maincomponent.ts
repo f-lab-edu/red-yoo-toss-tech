@@ -7,25 +7,25 @@ interface Article {
   id: number;
 }
 
-class MainComponent {
-  private $container: Element;
+class MainComponent<T> {
+  private $container: T;
 
-  constructor($container: Element) {
+  constructor($container: T) {
     this.$container = $container;
   }
 
-  render() {
+  render(): string {
     return `
     <h3 class='main-subject'>개발</h3>
     ${this.jsonRender()}
     `;
   }
 
-  jsonRender() {
+  private jsonRender(): string {
     const jsonDataList = MOCK_DATA;
-    let result = '';
+    let result: string = '';
 
-    jsonDataList.reduce((acc, { title, summary, date, id }) => {
+    jsonDataList.reduce((acc: string, { title, summary, date, id }) => {
       acc += `
         <a id="main-container" href='/article/${id}'>
           <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지" data-link>
@@ -41,7 +41,7 @@ class MainComponent {
     return result;
   }
 
-  totalComponent(title: string, summary: string, date: string): string {
+  private totalComponent(title: string, summary: string, date: string): string {
     return `
         ${this.titleComponent(title)}
         ${this.contentComponent(summary)}
@@ -49,13 +49,13 @@ class MainComponent {
     `;
   }
 
-  titleComponent(title: string): string {
+  private titleComponent(title: string): string {
     return `
         <h4 class="txt-title">${title}</h4>
     `;
   }
 
-  contentComponent(summary: string): string {
+  private contentComponent(summary: string): string {
     return `
       <span class="txt-content">
         ${summary}
@@ -63,7 +63,7 @@ class MainComponent {
     `;
   }
 
-  Unix_timestamp(t: any): string {
+  private Unix_timestamp(t: any): string {
     let date = new Date(t * 1000);
     let year = date.getFullYear();
     let month = '0' + (date.getMonth() + 1);
@@ -72,7 +72,7 @@ class MainComponent {
     return year + '-' + month.slice(-2) + '-' + day.slice(-2) + ' ';
   }
 
-  dateComponent(date: string) {
+  private dateComponent(date: string): string {
     return `
       <span class="txt-date">${this.Unix_timestamp(date)}</span>
     `;
