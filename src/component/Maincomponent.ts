@@ -7,10 +7,10 @@ interface Article {
   id: number;
 }
 
-class MainComponent<T> {
-  private $container: T;
+class MainComponent {
+  private $container: HTMLDivElement;
 
-  constructor($container: T) {
+  constructor($container: HTMLDivElement) {
     this.$container = $container;
   }
 
