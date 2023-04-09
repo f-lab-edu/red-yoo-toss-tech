@@ -1,10 +1,12 @@
 class FooterComponent {
-    $container;
-    constructor($container) {
-        this.$container = $container;
-    }
-    render() {
-        return `
+  private $container: HTMLDivElement;
+
+  constructor($container: HTMLDivElement) {
+    this.$container = $container;
+  }
+
+  render(): string {
+    return `
     <footer>
       <div class='footer-container'>
           <div class='footer-links-list'>
@@ -76,7 +78,7 @@ class FooterComponent {
       </div>
     </footer>
   `;
-    }
+  }
 }
+
 export default FooterComponent;
-//# sourceMappingURL=FooterComponent.js.map

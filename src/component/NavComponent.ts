@@ -1,10 +1,12 @@
 class NavComponent {
-    $container;
-    constructor($container) {
-        this.$container = $container;
-    }
-    render() {
-        return `
+  private $container: HTMLDivElement;
+
+  constructor($container: HTMLDivElement) {
+    this.$container = $container;
+  }
+
+  render(): string {
+    return `
     <div class='container'>
       <nav>
         <div class='nav-container'>
@@ -26,7 +28,7 @@ class NavComponent {
       </nav>
     </div>
   `;
-    }
+  }
 }
+
 export default NavComponent;
-//# sourceMappingURL=NavComponent.js.map
