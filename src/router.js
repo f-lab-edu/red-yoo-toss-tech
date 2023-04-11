@@ -20,15 +20,14 @@ const getParams = (match) => {
 
 const navigateTo = (url) => {
   history.pushState(null, '', url);
-  router();
+  const jsonDataList = MOCK_DATA;
+  const { pathname } = location;
+  const pageId = pathname.split('/').slice(-1)[0];
+  const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
+  router(refinedData);
 };
 
-const jsonDataList = MOCK_DATA;
-const { pathname } = location;
-const pageId = pathname.split('/').slice(-1)[0];
-const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
-
-const router = async () => {
+const router = async (refinedData) => {
   const routes = [
     { path: '/', view: MainComponent },
     { path: '/design', view: DesignComponent },
@@ -51,19 +50,20 @@ const router = async () => {
       isMatch: true,
     };
   }
-  const view = new match.route.view(refinedData);
-  $main.innerHTML = await view.render();
+
+  const viewComponent = new match.route.view(refinedData);
+
+  $main.innerHTML = await viewComponent.render();
 };
 
 window.addEventListener('popstate', router);
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.addEventListener('click', (e) => {
-    if (e.target.matches('[data-link]')) {
-      e.preventDefault();
-      navigateTo(e.target.href);
+  document.querySelector('.main').addEventListener('click', (e) => {
+    const mainContainer = e.target.closest('.main-container');
+    if (mainContainer) {
+      navigateTo(`/article/${mainContainer.getAttribute('data-link')}`);
     }
   });
 });
-
 export default router;
