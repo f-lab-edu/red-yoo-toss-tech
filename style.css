@@ -423,18 +423,18 @@ nav {
   margin-top: 80px;
 }
 
-.main-container {
+#main-container {
   display: flex;
   align-items: center;
   max-width: 100%;
   cursor: pointer;
 }
 
-.main-container:hover .txt-title {
+#main-container:hover .txt-title {
   color: var(--blue500);
 }
 
-.main-container:hover .logo-img {
+#main-container:hover .logo-img {
   box-shadow: rgb(0 0 33 / 7%) 0px 16px 22.4px 4.8px;
   transform: translate3D(0, -3%, 0);
 }
