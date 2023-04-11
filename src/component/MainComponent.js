@@ -20,7 +20,7 @@ class MainComponent {
           <div>
             ${this.totalComponent(title, summary, date)}
           </div>
-        </a>    
+        </a>
         `;
             result = acc;
             return acc;
