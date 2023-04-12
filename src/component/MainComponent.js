@@ -15,12 +15,12 @@ class MainComponent {
         let result = '';
         jsonDataList.reduce((acc, { title, summary, date, id }) => {
             acc += `
-        <a id="main-container" href='/article/${id}'>
-          <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지" data-link>
+        <div class="main-container"  data-link='${id}'>
+          <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
           <div>
             ${this.totalComponent(title, summary, date)}
           </div>
-        </a>
+        </div>
         `;
             result = acc;
             return acc;
@@ -47,7 +47,7 @@ class MainComponent {
     `;
     }
     Unix_timestamp(t) {
-        let date = new Date(t * 1000);
+        let date = new Date(Number(t) * 1000);
         let year = date.getFullYear();
         let month = '0' + (date.getMonth() + 1);
         let day = '0' + date.getDate();
