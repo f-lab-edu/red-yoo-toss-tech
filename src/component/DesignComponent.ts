@@ -1,6 +1,6 @@
 import DISIGN_MOCK_DATA from '../../DISIGN_MOCK_DATA.json';
 
-interface jsonData {
+interface JsonData {
   title: string;
   summary: string;
   date: string;
@@ -22,17 +22,17 @@ class DesignComponent {
   }
 
   private jsonRender(): string {
-    const jsonDataList: jsonData[] = DISIGN_MOCK_DATA;
+    const jsonDataList: JsonData[] = DISIGN_MOCK_DATA;
     let result = '';
 
     jsonDataList.reduce((acc: string, { title, summary, date, id }) => {
       acc += `
-        <a id="main-container"  href='/article/${id}'>
+        <div class="main-container" data-link='${id}'>
           <img class="logo-img" src="./src/img/design-title-img.png" alt="컨텐츠 이미지">
           <div>
             ${this.totalComponent(title, summary, date)}
           </div>
-        </a>    
+        </div>    
         `;
 
       result = acc;
@@ -63,8 +63,8 @@ class DesignComponent {
     `;
   }
 
-  private Unix_timestamp(t: any): string {
-    let date = new Date(t * 1000);
+  private Unix_timestamp(t: string | number): string {
+    let date = new Date(Number(t) * 1000);
     let year = date.getFullYear();
     let month = '0' + (date.getMonth() + 1);
     let day = '0' + date.getDate();
