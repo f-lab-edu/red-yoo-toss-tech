@@ -1,6 +1,6 @@
 import MOCK_DATA from '../../TECH_MOCK_DATA.json';
 
-interface Article {
+interface JsonData {
   title: string;
   summary: string;
   date: string;
@@ -22,19 +22,18 @@ class MainComponent {
   }
 
   private jsonRender(): string {
-    const jsonDataList = MOCK_DATA;
+    const jsonDataList: JsonData[] = MOCK_DATA;
     let result: string = '';
 
     jsonDataList.reduce((acc: string, { title, summary, date, id }) => {
       acc += `
-        <a id="main-container" href='/article/${id}'>
-          <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지" data-link>
+        <div class="main-container" data-link='${id}'>
+          <img class="logo-img" src="./src/img/content1.png" alt="컨텐츠 이미지">
           <div>
             ${this.totalComponent(title, summary, date)}
           </div>
-        </a>    
+        </div>
         `;
-
       result = acc;
       return acc;
     }, '');
@@ -63,8 +62,8 @@ class MainComponent {
     `;
   }
 
-  private Unix_timestamp(t: any): string {
-    let date = new Date(t * 1000);
+  private Unix_timestamp(t: string | number): string {
+    let date = new Date(Number(t) * 1000);
     let year = date.getFullYear();
     let month = '0' + (date.getMonth() + 1);
     let day = '0' + date.getDate();
