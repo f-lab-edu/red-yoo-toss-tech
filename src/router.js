@@ -19,15 +19,19 @@ const getParams = (match) => {
   );
 };
 
-const navigateTo = (url) => {
-  history.pushState(null, '', url);
+const getDataFromCurrentUrl = () => {
   const { pathname } = location;
   const pageId = pathname.split('/').slice(-1)[0];
-  let refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
-  router(refinedData);
+  const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
+  return refinedData;
+}
+
+const navigateTo = (url) => {
+  history.pushState(null, '', url);
+  router(getDataFromCurrentUrl());
 };
 
-const router = async (refinedData) => {
+const router = async () => {
   const routes = [
     { path: '/', view: MainComponent },
     { path: '/design', view: DesignComponent },
@@ -50,10 +54,7 @@ const router = async (refinedData) => {
       isMatch: true,
     };
   }
-  const { pathname } = location;
-  const pageId = pathname.split('/').slice(-1)[0];
-  refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
-  const viewComponent = new match.route.view(refinedData);
+  const viewComponent = new match.route.view(getDataFromCurrentUrl());
 
   $main.innerHTML = await viewComponent.render();
 };
