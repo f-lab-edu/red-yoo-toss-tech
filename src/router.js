@@ -6,6 +6,7 @@ import MOCK_DATA from '../TECH_MOCK_DATA.json';
 
 const $main = document.querySelector('.main');
 const pathToRegex = (path) => new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
+const jsonDataList = MOCK_DATA;
 
 const getParams = (match) => {
   const values = match.result.slice(1);
@@ -20,10 +21,9 @@ const getParams = (match) => {
 
 const navigateTo = (url) => {
   history.pushState(null, '', url);
-  const jsonDataList = MOCK_DATA;
   const { pathname } = location;
   const pageId = pathname.split('/').slice(-1)[0];
-  const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
+  let refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
   router(refinedData);
 };
 
@@ -50,7 +50,9 @@ const router = async (refinedData) => {
       isMatch: true,
     };
   }
-
+  const { pathname } = location;
+  const pageId = pathname.split('/').slice(-1)[0];
+  refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
   const viewComponent = new match.route.view(refinedData);
 
   $main.innerHTML = await viewComponent.render();
