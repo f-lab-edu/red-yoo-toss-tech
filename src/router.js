@@ -60,6 +60,7 @@ window.addEventListener('popstate', router);
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.main').addEventListener('click', (e) => {
+    window.scrollTo(0, 0);
     const mainContainer = e.target.closest('.main-container');
     if (mainContainer) {
       navigateTo(`/article/${mainContainer.getAttribute('data-link')}`);
