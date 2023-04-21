@@ -6,28 +6,21 @@ import MOCK_DATA from '../TECH_MOCK_DATA.json';
 
 const $main = document.querySelector('.main');
 const pathToRegex = (path) => new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
+const jsonDataList = MOCK_DATA;
 
-const getParams = (match) => {
-  const values = match.result.slice(1);
-  const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map((result) => result[1]);
-
-  return Object.fromEntries(
-    keys.map((key, i) => {
-      return [key, values[i]];
-    }),
-  );
-};
-
-const navigateTo = (url) => {
-  history.pushState(null, '', url);
-  const jsonDataList = MOCK_DATA;
+const getDataFromCurrentUrl = () => {
   const { pathname } = location;
   const pageId = pathname.split('/').slice(-1)[0];
   const refinedData = jsonDataList.find((ele) => ele.id === Number(pageId));
-  router(refinedData);
+  return refinedData;
+}
+
+const navigateTo = (url) => {
+  history.pushState(null, '', url);
+  router(getDataFromCurrentUrl());
 };
 
-const router = async (refinedData) => {
+const router = async () => {
   const routes = [
     { path: '/', view: MainComponent },
     { path: '/design', view: DesignComponent },
@@ -50,8 +43,7 @@ const router = async (refinedData) => {
       isMatch: true,
     };
   }
-
-  const viewComponent = new match.route.view(refinedData);
+  const viewComponent = new match.route.view(getDataFromCurrentUrl());
 
   $main.innerHTML = await viewComponent.render();
 };
